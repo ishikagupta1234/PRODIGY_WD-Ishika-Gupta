@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Language Learning Platform</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    /* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.section {
+  padding: 50px 0;
+}
+
+.section h2 {
+  text-align: center;
+}
+
+/* Navigation */
+nav {
+  background-color: black;
+  color: #fff;
+  padding: 0;
+  
+}
+
+.nav-links {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  display: inline;
+  margin-left: 20px;
+}
+
+.nav-links li:first-child {
+  margin-left: 0;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Hero Section */
+.hero {
+  background-image: url('https://wallpapercave.com/wp/wp3847328.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero h2 {
+  font-size: 3em;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+}
+.btn{
+    color: yellow;
+}
+.text-box{
+    border: 2px;
+    background-color: black;
+    color: white;
+    padding: 30pxpx;
+    width: 600px;
+}
+/* Features Section */
+.Features{
+    background-image: url("https://wallpapercave.com/wp/wp5598573.jpg");
+}
+.feature {
+  background-color: #fff;
+  padding: 30px;
+  margin-bottom: 30px;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Courses Section */
+.courses{
+    background-image: url("https://wallpapercave.com/wp/wp6028521.jpg");
+}
+.course {
+  background-color: #fff;
+  padding: 20px;
+  margin-bottom: 30px;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.image-button{
+    display: inline-block;
+    cursor: pointer;
+    border: none;
+    background: none;
+    padding: 0;
+}
+.image-button img{
+    width: 100px;
+    height: auto;
+}
+.image-button img:hover{
+    opacity: 0.8;
+}
+.course img {
+  width: 25%;
+  border-radius: 5px;
+}
+
+/* Testimonials Section */
+.testimonials{
+    background-image: url("http://getwallpapers.com/wallpaper/full/b/9/2/635213.jpg");
+}
+.testimonial {
+  background-color: white;
+  padding: 30px;
+  margin-bottom: 30px;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial p {
+  font-style: italic;
+}
+
+.testimonial cite {
+  font-weight: bold;
+}
+
+/* Contact Section */
+.contacts{
+    background-image: url("https://wallpapercave.com/wp/wp5598573.jpg");
+}
+.contact-form {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.contact-form textarea {
+  resize: vertical;
+}
+
+.contact-form button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+  background-color: #0056b3;
+}
+
+.contact-form button:active {
+  background-color: #003e80;
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+}
+
+</style>
+<body>
+  <header>
+    <nav>
+      <div class="container">
+        
+        <ul class="nav-links">
+            
+          <li><a href="#features">Features</a></li>
+          <li><a href="#courses">Courses</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="hero">
+      <div class="text-box" class="container">
+        <h2>The Language Hub</h2>
+        <p>Learn a New Language Today!</p>
+        <a href="#courses" class="btn">Get Started</a>
+      </div>
+    </div>
+  </header>
+
+  <section id="features" class="Features">
+    <div class="container">
+      <h2>Features</h2>
+      <div class="feature">
+        <h3>Interactive Lessons</h3>
+        <p>Engage with interactive lessons designed to make learning fun and effective.</p>
+      </div>
+      <div class="feature">
+        <h3>Personalized Learning</h3>
+        <p>Receive personalized recommendations and feedback tailored to your learning progress.</p>
+      </div>
+      <div class="feature">
+        <h3>Mobile Compatibility</h3>
+        <p>Access your courses anytime, anywhere, on any device with our mobile-friendly platform.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="courses" class="courses">
+    <div class="container">
+      <h2>Courses</h2>
+      <div class="course">
+        <button class="image-button" onclick="alert('Button clicked!')">
+        <img src="https://momlovesbest.com/wp-content/uploads/2017/03/Spanish.jpg" alt="Course 1" alt="Button Image">
+        <h3>Spanish</h3>
+        <p>Start your journey with the basics of Spanish language and culture.Learn Spanish to unlock communication with over 580 million native speakers worldwide and immerse yourself in diverse cultures across Spain, Latin America, and beyond.</p>
+        </button>
+      </div>
+      <div class="course">
+        <button class="image-button" onclick="alert('Button clicked!')">
+        <img src="https://adaminischool.com/wp-content/uploads/2021/03/French-ClassesOnline-WEB-1024x682.jpg" alt="Course 2" alt="Button Image">
+        <h3>French</h3>
+        <p>Mastering French opens doors to rich cultural experiences, prestigious universities, and international career opportunities, with over 300 million speakers globally.</p>
+        </button>
+      </div>
+      <div class="course">
+        <button class="image-button" onclick="alert('Button clicked!')">
+        <img src="https://languagespathways.ie/wp-content/uploads/2020/11/German-language.jpg" alt="Course 3" alt="Button Image">
+        <h3>German</h3>
+        <p>Learning German offers access to one of the world's strongest economies, renowned educational institutions, and a gateway to Central Europe's rich history and culture, spoken by over 100 million people worldwide.</p>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <section id="testimonials" class="testimonials">
+    <div class="container">
+      <h2>Testimonials</h2>
+      <div class="testimonial">
+        <p>"Language Hub has been an incredible resource for my language learning journey. The courses are well-structured and engaging, and the community support is fantastic!"</p>
+        <cite>- Aisha Verma, Student</cite>
+      </div>
+      <div class="testimonial">
+        <p>"I never thought learning a new language could be this fun! Thanks to Language Hub.."</p>
+        <cite>- Kabir Mehta, Student</cite>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contacts">
+    <div class="container">
+      <h2>Contact Us</h2>
+      <p>Have questions or feedback? Reach out to us!</p>
+      <form id="contactForm" class="contact-form">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+        <button type="submit" class="btn">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2024 The Language Hub. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

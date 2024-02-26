@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ishika Gupta - Portfolio</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        nav {
+            background-color: black;
+            padding: 15px 30px;
+            position: fixed;
+            width: 100%;
+            height: 9%;
+            z-index: 1000;
+            text-align: right;
+        }
+
+        nav a {
+            color: white;
+            font-family: 'Times New Roman', Times, serif;
+            text-size-adjust: 10;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            font-size: 1.2em;
+            transition: color 0.3s;
+            position: relative;
+            
+        }
+
+        nav a:hover {
+            color: #ff6600;
+        }
+
+        .header {
+            background-image: url('ishika back ground image.jpg');
+            background-size: cover;
+            background-position: center;
+            color: black;
+            height: 580px;
+            text-align: left;
+            padding: 200px 125px 75px 200px;
+            position: relative;
+        }
+ 
+
+        header h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        header p {
+            font-size: 1.2em;
+            margin-bottom: 40px;
+        }
+
+        button{
+            background-color: #aadcdc;
+            border: none;
+            color: black;
+            padding: 15px 32px;
+            text-align: left;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+
+        button a{
+            background-color: #aadcdc;
+            color: black;
+            font-family: 'Times New Roman', Times, serif;
+            text-decoration: none;
+        }
+
+        .aboutme{
+            background-image: url('bg 1.jpg');
+            background-size: cover;
+            padding: 75px 50px;
+            text-align: center;
+            height: 650px;
+        }
+
+        .aboutme h2{
+            font-size: 2em;
+            margin-bottom: 40px;
+        }
+
+        .about{
+            background-color: white;
+            background-size: cover;
+            padding: 75px 50px;
+            text-align: center;
+        }
+ 
+        .education {
+            background-image: url('bg 2.jpg');
+            background-size: cover;
+            padding: 75px 50px;
+            text-align: center;
+            height: 650px;
+        }
+
+        .education h2 {
+            font-size: 2em;
+            margin-bottom: 40px;
+        }
+
+        .educations{
+            background-color: white;
+            
+            padding: 25px 25px;
+            text-align: center;
+            background-size: cover;
+        }
+
+
+
+        .skills {
+            background-image: url('bg 3.jpg');
+            background-size: cover;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .skills h2 {
+            font-size: 2em;
+            margin-bottom: 40px;
+        }
+
+        .skill {
+            background-color: white;
+            color: black;
+            display: inline-block;
+            margin: 6px 20px;
+            vertical-align: top;
+            
+        }
+        
+        section div{
+            margin: 6px;
+        }
+
+
+        .experiences {
+            background-image: url('bg 4.jpg');
+            background-size: cover;
+            padding: 80px 20px;
+            text-align: center;
+            color: black;
+        }
+
+        .experiences h2 {
+            font-size: 2em;
+            margin-bottom: 40px;
+        }
+
+    
+    
+
+        .experience{
+            background-color: #fff;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            margin: 20px;
+            padding: 20px;
+            border-radius: 10px;
+            width: 300px;
+            text-align: center;
+            transition: transform 0.3s;
+            display: inline-block;
+        }
+
+
+
+        .projects {
+            background-image: url('bg 5.jpg');
+            background-size: cover;
+            padding: 80px 20px;
+            text-align: center;
+            color: black;
+        }
+
+        .project {
+            background-color: #fff;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            margin: 20px;
+            padding: 20px;
+            border-radius: 10px;
+            width: 300px;
+            text-align: center;
+            transition: transform 0.3s;
+            display: inline-block;
+        }
+
+        .project:hover {
+            transform: scale(1.05);
+        }
+
+        .resume{
+            background-image: url('bg 6.jpg');
+            background-size: cover;
+            padding: 80px 20px;
+            text-align: center; 
+        }
+
+        .contact {
+            background-image: url('bg 7.jpg');
+            background-size: cover;
+            color: black;
+            text-align: center;
+            padding: 80px 20px;
+        }
+
+        .contact form {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact form label,
+        .contact form input,
+        .contact form textarea,
+        .contact form button {
+            display: block;
+            margin-bottom: 20px;
+            width: 100%;
+        }
+
+        .contact form input,
+        .contact form textarea {
+            padding: 10px;
+            font-size: 1em;
+        }
+
+        .contact form button {
+            background-color: #ff6600;
+            color: #fff;
+            padding: 10px 20px;
+            font-size: 1.2em;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .contact form button:hover {
+            background-color: #e65100;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#aboutme">About me</a>
+        <a href="#education">Education</a>
+        <a href="#skills">Skills</a>
+        <a href="#experiences">Experiences</a>
+        <a href="#projects">Projects</a>
+        <a href="#resume">Resume</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <header id="home" class="header">
+        <h1>Ishika Gupta</h1>
+        <p>Web Developer | Designer | Innovator</p>
+        <button><a href="#aboutme">About me</a></button>
+    </header>
+
+    <section class="aboutme" id="aboutme">
+        <h2>About me</h2>
+        <div class="about">
+            <p><i>Hello! I'm Ishika Gupta, a passionate and motivated BCA student with a keen interest in the dynamic world of computer science.
+            With a strong foundation in programming languages, database management, and software development, I am eager to leverage my 
+            skills and knowledge to make meaningful contributions in the tech industry.</i></p>
+            <br>  
+            <p><i>In addition to technical skills, I also value teamwork and collaboration. I believe that great ideas are born through 
+            collective effort, and I actively seek opportunities to collaborate with peers and professionals to tackle complex problems 
+            and achieve shared goals.</i></p>
+            <br>
+            <p><i>As I embark on the next phase of my journey, I am excited about the prospect of applying my skills and knowledge to real-world
+            challenges. Whether it's through internships, freelance projects, or full-time opportunities, I am eager to explore diverse 
+            avenues where I can contribute meaningfully and continue to grow as a professional in the field of computer science.</i></p>
+        </div>
+    </section>
+
+    <section class="education" id="education">
+        <h2>Education</h2>
+        <div class="educations">
+            
+            <h3>Bachelor of Computer Applications (BCA)</h3>
+            <p>University- Guru Gobind Singh Indraprastha University, Delhi, India<br>
+                College- Vivekananda Institute of Professional Studies<br>
+                Year of Graduation- 2022-2025</p>
+            </div>
+            <div class="educations">
+            <h3>Higher Secondary School</h3>
+            <p>School- Queen Mary's School, Northend, Model Town, Delhi, India<br>
+               Year of Graduation- 2020-2022</p></p>
+            </div>
+       
+    </section>
+
+
+    <section class="skills" id="skills">
+        <h2>Skills</h2>
+        <div class="skill">
+            
+            <h3>HTML</h3>
+            <p>I have great knowledge about HTML. I can easily create and design web pages and I keep myself updated with various updates in HTML.</p>
+        </div>
+        <div class="skill">
+           
+            <h3>CSS</h3>
+            <p>With the help of CSS, I can enhance the visual appearances of web pages which becomes more attractive to the user's eyes.</p>
+        </div>
+        <div class="skill">
+            
+            <h3>JavaScript</h3>
+            <P>JavaScript helps me to enable dynamic and interactive behavior in web browsers, which helps in facilitating client-side scripting for web development.</P>
+        </div>
+        <div class="skill">
+            
+            <h3>C(Programming Language)</h3>
+            <p>C helps me with a structured syntax which is needed for system programming, embedded systems, and developing diverse applications.</p>
+        </div>
+        <div class="skill">
+            
+            <h3>Project Management</h3>
+            <p>I am excellent at project management leading to successful execution of tasks and resources to acheive specific goals within defined constraints.</p>
+        </div>
+       
+    </section>
+
+    <section class="experiences" id="experiences">
+        <h2>Experiences</h2>
+ 
+        <div class="experience">
+           
+            <h3>Web Developer Intern</h3>
+            <p>Company name- Bharat Intern<br>
+               Duration of internship- 10 November 2023 to 10 December 2023</p>
+            </div>
+            <div class="experience">
+            
+                <h3>Web Developer Intern</h3>
+                <p>Company name- Codsoft<br>
+                   Duration of the internship- 25 November 2023 to 25 December 2023</p>
+            </div>
+            <div class="experience">
+           
+                <h3>C++ Programming Intern</h3>
+                <p>Company name- Codsoft<br>
+                   Duration of internship- 1 January 2024 to 31 January 2024</p>
+                </div>    
+       
+    </section>
+
+    <section class="projects" id="projects">
+        <h2>Projects</h2>
+        <div class="project">
+            <h3>Project 1</h3>
+            <p><u>HOMEPAGE OF NETFLIX:</u> <br>I have created a simple website having similar homepage that of Netflix using using HTML and CSS. I 
+                have added the shows, movies, web series admirable description, added images, videos, audios and designed a visually 
+                appealing layout. Experimented with font styles, and played with background colors.</p>
+            <a href="#" class="btn">View Project</a>
+        </div>
+
+        <div class="project">
+            <h3>Project 2</h3>
+            <p><u>LANDING PAGE:</u> <br>I have created a landing page. I have learnt to create columns, divide
+                sections, arrange items, and add headers and footers. I paid special attention to alignments,
+                padding, color palette, boxes, and other elements. A landing page project allowed me to apply HTML and CSS skills, 
+                while ensuring a visually appealing and user-friendly design.</p>
+            <a href="#" class="btn">View Project</a>
+        </div>
+
+        <div class="project">
+            <h3>Project 3</h3>
+            <p><u>CALCULATOR:</u> <br>I have created a basic calculator using CSS, and HTML, I have implemented an
+                interactive interface with buttons for addition, subtraction, multiplication, and division
+                operations. The calculator have a display screen to show user input and results. Utilized
+                CSS grid system for button alignments.</p>
+            <a href="#" class="btn">View Project</a>
+        </div>
+    </section>
+
+    <section class="resume" id="resume">
+        <div class="resume">
+        <h2>Resume</h2>
+        <p>Download my resume to learn more about my experience and skills.</p>
+        <a href="C:\Users\Ishika\Downloads\ISHIKA GUPTA RESUME.docx" target="_blank">
+            <button>Download Resume</button>
+        </a>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <h2>Contact Me</h2>
+        <form action="#" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+    
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+    
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+    
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Ishika Gupta. All rights reserved.</p>
+    </footer>
+
+</body>
+
+</html>

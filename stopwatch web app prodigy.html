@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stopwatch</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f5f5f5;
+}
+
+.container {
+  text-align: center;
+}
+
+.stopwatch {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.display {
+  font-size: 2em;
+  margin-bottom: 20px;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#microseconds {
+  font-size: 0.5em;
+}
+
+.controls {
+  margin-top: 20px;
+}
+
+button {
+  font-size: 1em;
+  padding: 10px 20px;
+  margin: 0 10px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: #4CAF50;
+  color: white;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+button:active {
+  background-color: #3e8e41;
+}
+
+</style>
+<body>
+  <div class="container">
+    <div class="stopwatch">
+      <div id="display" class="display">00:00:00<span id="microseconds">00</span></div>
+      <div class="controls">
+        <button id="startStopBtn" onclick="startStop()">Start</button>
+        <button id="resetBtn" onclick="reset()">Reset</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    let timer;
+let isRunning = false;
+let milliseconds = 0;
+let seconds = 0;
+let minutes = 0;
+let hours = 0;
+
+function startStop() {
+  if (isRunning) {
+    clearInterval(timer);
+    document.getElementById("startStopBtn").innerText = "Start";
+    isRunning = false;
+  } else {
+    timer = setInterval(updateTime, 10);
+    document.getElementById("startStopBtn").innerText = "Stop";
+    isRunning = true;
+  }
+}
+
+function updateTime() {
+  milliseconds++;
+  if (milliseconds >= 100) {
+    milliseconds = 0;
+    seconds++;
+    if (seconds >= 60) {
+      seconds = 0;
+      minutes++;
+      if (minutes >= 60) {
+        minutes = 0;
+        hours++;
+      }
+    }
+  }
+  displayTime();
+}
+
+function displayTime() {
+  let time = `${pad(hours)}:${pad(minutes)}:${pad(seconds)}`;
+  let ms = pad(milliseconds);
+  document.getElementById("display").innerText = `${time}:${ms}`;
+}
+
+function reset() {
+  clearInterval(timer);
+  document.getElementById("display").innerText = "00:00:00:00";
+  document.getElementById("startStopBtn").innerText = "Start";
+  isRunning = false;
+  milliseconds = 0;
+  seconds = 0;
+  minutes = 0;
+  hours = 0;
+}
+
+function pad(value) {
+  return value < 10 ? "0" + value : value;
+}
+
+  </script>
+</body>
+</html>
